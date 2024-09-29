@@ -42,43 +42,47 @@
         <a href="customer_list.php">View Customer List</a>
         <a href="invoice_report.php">Invoice Report</a>
     </div>
+    <div class="container mt-5">
+        <?php
+            include 'config.php';  
+            $sql = "SELECT * FROM `customer` ORDER BY `customer`.`contact_no` ASC";
+            $result = mysqli_query($conn, $sql);
 
-    <?php
-include 'config.php';  
-$sql = "SELECT * FROM `customer` ORDER BY `customer`.`contact_no` ASC";
-$result = mysqli_query($conn, $sql);
+            if (mysqli_num_rows($result) > 0) {
+                echo "<h1>Customer List</h1>";
+                echo "<table class='table table-bordered'>
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Title</th>
+                                <th>First Name</th>
+                                <th>Middle Name</th>
+                                <th>Last Name</th>
+                                <th>Contact Number</th>
+                                <th>District</th>
+                            </tr>
+                        </thead>
+                        <tbody>";
+    
+                while($row = mysqli_fetch_assoc($result)) {
+                    echo "<tr>
+                            <td>" . $row["id"] . "</td>
+                            <td>" . $row["title"] . "</td>
+                            <td>" . $row["first_name"] . "</td>
+                            <td>" . $row["middle_name"] . "</td>
+                            <td>" . $row["last_name"] . "</td>
+                            <td>" . $row["contact_no"] . "</td>
+                            <td>" . $row["district"] . "</td>
+                          </tr>";
+                }
+                echo "</tbody></table>";
+            } else {
+                echo "0 customers found.";
+            }
 
-if (mysqli_num_rows($result) > 0) {
-    echo "<h1>Customer List</h1>";
-    echo "<table border='1'>
-            <tr>
-                <th>ID</th>
-                <th>Title</th>
-                <th>First Name</th>
-                <th> Middle Name</th>
-                <th>Last Name</th>
-                <th>Contact Number</th>
-                <th>District</th>
-            </tr>";
-
-    while($row = mysqli_fetch_assoc($result)) {
-        echo "<tr>
-                <td>" . $row["id"] . "</td>
-                <td>" . $row["title"] . "</td>
-                <td>" . $row["first_name"] . "</td>
-                <td>" . $row["middle_name"] . "</td>
-                <td>" . $row["last_name"] . "</td>
-                <td>" . $row["contact_no"] . "</td>  <!-- Update here -->
-                <td>" . $row["district"] . "</td>
-              </tr>";
-    }
-    echo "</table>";
-} else {
-    echo "0 customers found.";
-}
-
-mysqli_close($conn);
-?>
+            mysqli_close($conn);
+        ?>
+    </div>
 
 </body>
 

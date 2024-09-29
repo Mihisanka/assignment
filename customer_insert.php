@@ -6,10 +6,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $first_name = $_POST['first_name'];
     $middle_name = $_POST['middle_name'];
     $last_name = $_POST['last_name'];
-    $contact_no = $_POST['contact_no'];  // This should match the name in your form
+    $contact_no = $_POST['contact_no'];  
     $district = $_POST['district'];
 
-    // Insert query
+    
     $sql = "INSERT INTO customer (title, first_name, middle_name ,last_name, contact_no, district) 
             VALUES ('$title', '$first_name', '$middle_name', '$last_name', '$contact_no', '$district')";
 
