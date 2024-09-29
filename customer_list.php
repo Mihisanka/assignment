@@ -73,6 +73,10 @@
                             <td>" . $row["last_name"] . "</td>
                             <td>" . $row["contact_no"] . "</td>
                             <td>" . $row["district"] . "</td>
+                            <td>
+                                <a href='customer_update.php?id=" . $row["id"] . "' class='btn btn-warning btn-sm'>Update</a>
+                                <a href='customer_delete.php?id=" . $row["id"] . "' class='btn btn-danger btn-sm' onclick='return confirm(\"Are you sure you want to delete this customer?\");'>Delete</a>
+                            </td>
                           </tr>";
                 }
                 echo "</tbody></table>";
