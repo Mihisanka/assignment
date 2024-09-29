@@ -86,6 +86,9 @@
 
             mysqli_close($conn);
         ?>
+
+        <a href=' "' class='btn btn-primary btn-sm'>Item List</a>
+
     </div>
 
 </body>
