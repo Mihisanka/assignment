@@ -63,19 +63,19 @@
             <div class="mb-3">
                 <label for="item_category" class="form-label">Category:</label>
                 <select class="form-select" name="item_category" required>
-                    <option value="Electronics">Electronics</option>
-                    <option value="Furniture">Furniture</option>
-                    <option value="Clothing">Clothing</option>
+                    <option value="1">Electronics</option>
+                    <option value="2">Furniture</option>
+                    <option value="3">Clothing</option>
                 </select>
             </div>
 
             <div class="mb-3">
-                <label for="item_sub_category" class="form-label">Sub Category:</label>
-                <select class="form-select" name="item_sub_category" required>
-                    <option value="Mobile">Mobile</option>
-                    <option value="Laptop">Laptop</option>
-                    <option value="Chair">Chair</option>
-                    <option value="Shirt">Shirt</option>
+                <label for="item_subcategory" class="form-label">Sub Category:</label>
+                <select class="form-select" name="item_subcategory" required>
+                    <option value="1">Mobile</option>
+                    <option value="2">Laptop</option>
+                    <option value="3">Chair</option>
+                    <option value="4">Shirt</option>
                 </select>
             </div>
 
