@@ -54,13 +54,13 @@
         <?php
         include 'config.php';
 
-        // SQL query to fetch unique items
+       
         $sql = "SELECT DISTINCT item_name, item_category, item_subcategory, quantity
                 FROM item";
 
         $result = mysqli_query($conn, $sql);
 
-        // Check if any results are returned
+        
         if (mysqli_num_rows($result) > 0) {
             echo "<table class='table table-bordered'>
                     <thead>
@@ -73,7 +73,7 @@
                     </thead>
                     <tbody>";
 
-            // Loop through and display results
+            
             while ($row = mysqli_fetch_assoc($result)) {
                 echo "<tr>
                         <td>{$row['item_name']}</td>
