@@ -46,7 +46,7 @@
         <a href="customer_form.php">Customer Registration</a>
         <a href="item_form.php">Item Registration</a>
         <a href="customer_list.php">View List</a>
-        <a href="invoice_report.php">Invoice Report</a>
+        <a href="invoice_item_report.php"> Report</a>
     </div>
     <h1>Welcome to the ERP System</h1>
 
