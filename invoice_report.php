@@ -46,6 +46,7 @@
         <a href="index.php">Home</a>
         <a href="customer_list.php">View List</a>
         <a href="invoice_item_report.php">Invoice Item Report</a>
+        <a href="item_report.php"> Item Report</a>
     </div>
 
     <div class="container mt-5">
